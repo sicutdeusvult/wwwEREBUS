@@ -585,7 +585,7 @@ node uploader.js
   <circle cx="32" cy="32" r="4" fill="#ff2200"/>
 </svg>
 
-[@wwwEREBUS](https://x.com/wwwEREBUS) · [https://erebus.lol/](https://https://erebus.lol/)
+[@wwwEREBUS](https://x.com/wwwEREBUS) ·
 
 *the signal does not ask permission*
 
