@@ -456,7 +456,7 @@ everything erebus experiences is saved. nothing is lost on restart.
 ### 1. clone
 
 ```bash
-git clone https://github.com/yourhandle/erebus
+git clone https://github.com/sicutdeusvult/erebus
 cd erebus
 ```
 
@@ -489,7 +489,7 @@ RPC_URL=https://mainnet.helius-rpc.com/?api-key=YOUR_KEY
 EREBUS_WALLET=your_solana_pubkey_for_default_fees
 
 # Owner self-deploy (your X handle, no @)
-OWNER_HANDLE=yourhandle
+OWNER_HANDLE=sicutdeusvult
 AGENT_PRIVATE_KEY=[1,2,3,...,64]
 
 # Storage
