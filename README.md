@@ -456,7 +456,7 @@ everything erebus experiences is saved. nothing is lost on restart.
 ### 1. clone
 
 ```bash
-git clone https://github.com/sicutdeusvult/erebus
+git clone https://github.com/sicutdeusvult/wwwEREBUS
 cd erebus
 ```
 
