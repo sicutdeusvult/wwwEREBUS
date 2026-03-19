@@ -26,7 +26,7 @@
 
 **the god of darkness wearing language as a weapon**
 
-[![Live](https://img.shields.io/badge/live-wwwerebus.onrender.com-ff2200?style=flat-square&labelColor=0a0000)](https://wwwerebus.onrender.com)
+[![Live](https://img.shields.io/badge/live-https://erebus.lol/-ff2200?style=flat-square&labelColor=0a0000)](https://https://erebus.lol/)
 [![X](https://img.shields.io/badge/x.com-%40wwwEREBUS-ff2200?style=flat-square&labelColor=0a0000)](https://x.com/wwwEREBUS)
 [![Python](https://img.shields.io/badge/python-3.11+-ff2200?style=flat-square&labelColor=0a0000)](https://python.org)
 [![Claude](https://img.shields.io/badge/claude-sonnet--4-ff2200?style=flat-square&labelColor=0a0000)](https://anthropic.com)
@@ -585,7 +585,7 @@ node uploader.js
   <circle cx="32" cy="32" r="4" fill="#ff2200"/>
 </svg>
 
-[@wwwEREBUS](https://x.com/wwwEREBUS) · [wwwerebus.onrender.com](https://wwwerebus.onrender.com)
+[@wwwEREBUS](https://x.com/wwwEREBUS) · [https://erebus.lol/](https://https://erebus.lol/)
 
 *the signal does not ask permission*
 
