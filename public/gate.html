@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>erebus gate</title>
+  <meta name="description" content="erebus gate for @wwwEREBUS and $EREBUS.">
+  <style>
+    :root{--bg:#000;--fg:#dfdbd2;--muted:#817867;--gold:#c9a548;--line:rgba(201,165,72,.22);--panel:rgba(8,8,8,.78);--soft:rgba(255,255,255,.04)}
+    *{box-sizing:border-box} html,body{height:100%;margin:0;background:#000;color:var(--fg);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;overflow:hidden}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at center, rgba(255,255,255,.03), transparent 40%),repeating-linear-gradient(180deg, rgba(255,255,255,.018) 0 1px, transparent 1px 4px);opacity:.28;pointer-events:none}
+    .wrap{position:relative;min-height:100%;display:grid;place-items:center;padding:24px}
+    .core{position:relative;width:min(1080px,94vw);height:min(720px,92vh);border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.014), rgba(255,255,255,.006));box-shadow:0 0 0 1px rgba(255,255,255,.02),0 0 120px rgba(0,0,0,.55);display:grid;grid-template-columns:1.08fr .92fr;overflow:hidden}
+    .art{position:relative;padding:40px 40px 36px;display:flex;flex-direction:column;justify-content:flex-end;border-right:1px solid var(--line)}
+    .entity{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+    .entity img{width:min(54%,430px);opacity:.56;filter:blur(.3px) drop-shadow(0 0 40px rgba(255,255,255,.04));animation:breathe 9s ease-in-out infinite}
+    .halo{position:absolute;top:88px;left:50%;width:170px;height:170px;border:2px solid var(--gold);border-radius:50%;transform:translateX(-50%);box-shadow:0 0 38px rgba(201,165,72,.18), inset 0 0 28px rgba(201,165,72,.1);animation:drift 26s linear infinite}
+    .eyebrow{position:relative;z-index:2;font-size:11px;letter-spacing:.36em;color:var(--gold);text-transform:lowercase;margin-bottom:18px}
+    .title{position:relative;z-index:2;font-size:72px;line-height:.92;letter-spacing:.2em;text-transform:lowercase;margin:0 0 12px}
+    .sub{position:relative;z-index:2;color:var(--muted);font-size:12px;letter-spacing:.28em;text-transform:lowercase}
+    .manifesto{position:relative;z-index:2;max-width:460px;margin-top:26px;color:#bdb6aa;font-size:14px;line-height:1.95}
+    .login{padding:40px 34px 36px;background:linear-gradient(180deg, rgba(201,165,72,.035), transparent 28%, rgba(255,255,255,.01));display:flex;flex-direction:column;justify-content:center;gap:18px}
+    .label{font-size:12px;letter-spacing:.24em;text-transform:lowercase;color:#d9d2c5}
+    .status{min-height:48px;color:var(--gold);font-size:16px;line-height:1.7}
+    .card{border:1px solid var(--line);background:var(--panel);padding:18px 18px 16px;display:flex;flex-direction:column;gap:12px}
+    .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--soft);padding-bottom:10px;font-size:13px;color:#cfc9bc}.row:last-child{border-bottom:none;padding-bottom:0}.row strong{color:var(--fg);font-weight:600}
+    .input{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);padding:12px 0;color:var(--fg);font-size:17px;outline:none}
+    .actions{display:flex;flex-direction:column;gap:10px}
+    .btn{appearance:none;border:1px solid var(--line);background:rgba(255,255,255,.015);color:var(--fg);padding:14px 16px;font:inherit;font-size:14px;letter-spacing:.18em;text-transform:lowercase;cursor:pointer;transition:.18s ease}
+    .btn:hover{background:rgba(201,165,72,.08);border-color:rgba(201,165,72,.38)}
+    .btn.primary{background:rgba(201,165,72,.12);color:#f1ead9}
+    .btn.primary:hover{background:rgba(201,165,72,.18)}
+    .btn[disabled]{opacity:.42;cursor:not-allowed}
+    .tiny{color:var(--muted);font-size:11px;line-height:1.7;letter-spacing:.08em;text-transform:lowercase}
+    .divider{height:1px;background:linear-gradient(90deg, transparent, var(--line), transparent);margin:2px 0}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--line);font-size:11px;letter-spacing:.18em;text-transform:lowercase;color:#d7d1c2;width:max-content}
+    .hidden{display:none!important}
+    @keyframes breathe{0%,100%{transform:scale(.985)}50%{transform:scale(1.02)}}
+    @keyframes drift{from{transform:translateX(-50%) rotate(0deg)}to{transform:translateX(-50%) rotate(360deg)}}
+    @media (max-width:900px){.core{grid-template-columns:1fr;height:auto}.art{min-height:380px;border-right:none;border-bottom:1px solid var(--line)}.title{font-size:48px}.halo{top:70px;width:128px;height:128px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="core">
+      <section class="art">
+        <div class="entity">
+          <div class="halo"></div>
+          <img src="/erebus_logo.png" alt="erebus">
+        </div>
+        <div class="eyebrow">threshold protocol</div>
+        <h1 class="title">erebus</h1>
+        <div class="sub">@wwwEREBUS · $EREBUS · sovereign dark signal</div>
+        <div class="manifesto">this gate binds x identity first. erebus then preserves one generated wallet for that identity on the persistent disk. ownership can also be anchored to a connected wallet, and the generated wallet can be exported through a guarded flow inside the terminal.</div>
+      </section>
+      <section class="login">
+        <div class="label" id="prompt">identity required</div>
+        <div class="status" id="status">sign in with x to cross the veil. replies stay fast. original transmissions now breathe on a slower cadence.</div>
+        <div class="card" id="authCard">
+          <div class="row"><span>node</span><strong>erebus gate</strong></div>
+          <div class="row"><span>path</span><strong>x session</strong></div>
+          <div class="row"><span>signal</span><strong>@wwwEREBUS</strong></div>
+          <div class="row"><span>token</span><strong>$EREBUS</strong></div>
+        </div>
+        <div class="card hidden" id="profileCard">
+          <div class="pill">identity acknowledged</div>
+          <div class="row"><span>handle</span><strong id="handleValue">-</strong></div>
+          <div class="row"><span>generated wallet</span><strong id="walletValue">-</strong></div>
+          <div class="row"><span>ownership wallet</span><strong id="ownedWalletValue">-</strong></div>
+          <div class="row"><span>balance</span><strong id="balanceValue">-</strong></div>
+        </div>
+        <input class="input" id="intent" autocomplete="off" spellcheck="false" placeholder="state your intent">
+        <div class="actions">
+          <button class="btn primary" id="loginBtn">sign in with x</button>
+          <button class="btn" id="enterBtn" disabled>enter terminal</button>
+          <button class="btn hidden" id="logoutBtn">withdraw identity</button>
+        </div>
+        <div class="divider"></div>
+        <div class="tiny" id="foot">identity is x session based. terminal access uses the same session, not a second login. each connected user keeps one generated wallet in /data and may bind one ownership wallet. exports happen only from the terminal with an explicit confirmation phrase.</div>
+      </section>
+    </div>
+  </div>
+<script>
+const promptEl=document.getElementById('prompt');
+const statusEl=document.getElementById('status');
+const handleEl=document.getElementById('handleValue');
+const walletEl=document.getElementById('walletValue');
+const balanceEl=document.getElementById('balanceValue');
+const ownedWalletEl=document.getElementById('ownedWalletValue');
+const authCard=document.getElementById('authCard');
+const profileCard=document.getElementById('profileCard');
+const loginBtn=document.getElementById('loginBtn');
+const enterBtn=document.getElementById('enterBtn');
+const logoutBtn=document.getElementById('logoutBtn');
+const intent=document.getElementById('intent');
+
+function shortWallet(v){ if(!v) return 'unavailable'; return v.length > 14 ? v.slice(0,8)+'...'+v.slice(-6) : v; }
+function setGateCopy(text){ statusEl.textContent=text; }
+function enableEntry(){ enterBtn.disabled=false; loginBtn.classList.add('hidden'); logoutBtn.classList.remove('hidden'); authCard.classList.add('hidden'); profileCard.classList.remove('hidden'); promptEl.textContent='identity accepted'; }
+function disableEntry(){ enterBtn.disabled=true; loginBtn.classList.remove('hidden'); logoutBtn.classList.add('hidden'); authCard.classList.remove('hidden'); profileCard.classList.add('hidden'); promptEl.textContent='identity required'; }
+
+async function loadSession(){
+  try{
+    const res=await fetch('/auth/x/me',{credentials:'include'});
+    const data=await res.json();
+    if(data && data.logged_in){
+      handleEl.textContent=data.handle || '@unknown';
+      walletEl.textContent=shortWallet(data.wallet);
+      ownedWalletEl.textContent=shortWallet(data.owned_wallet) || 'not bound';
+      balanceEl.textContent=(data.balance_sol ?? '0') + ' sol';
+      enableEntry();
+      setGateCopy('identity acknowledged. the gate will now permit terminal access.');
+      return true;
+    }
+  }catch(e){}
+  disableEntry();
+  return false;
+}
+
+loginBtn.onclick=()=>{ window.location.href='/auth/x/start'; };
+logoutBtn.onclick=()=>{ window.location.href='/auth/x/logout'; };
+enterBtn.onclick=()=>{ window.location.href='/terminal'; };
+intent.addEventListener('keydown', e=>{
+  if(e.key!=='Enter') return;
+  const v=intent.value.trim().toLowerCase();
+  intent.value='';
+  if(!v){ setGateCopy('silence has no clearance.'); return; }
+  if(/login|sign in|x|twitter|enter|proceed|access/.test(v)){ setGateCopy('the path is explicit. sign in with x, then enter the terminal.'); return; }
+  if(/wallet|balance|sol/.test(v)){ setGateCopy('x identity unlocks one generated wallet. ownership wallets and secure export live inside the terminal.'); return; }
+  if(/who|what/.test(v)){ setGateCopy('not a question for the threshold. identify yourself first.'); return; }
+  setGateCopy('intent received. identity still precedes entry.');
+});
+
+if(location.hash === '#x-login-ok') setGateCopy('x session sealed. verifying identity...');
+if(location.hash === '#x-login-error') setGateCopy('the gate rejected the callback. try the x login again.');
+if(location.hash === '#x-login-denied') setGateCopy('identity was withheld. access remains closed.');
+loadSession();
+intent.focus();
+</script>
+</body>
+</html>

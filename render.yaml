@@ -1,0 +1,41 @@
+services:
+  - type: web
+    name: erebus-core
+    runtime: python
+    buildCommand: bash build.sh
+    startCommand: python server.py
+    disk:
+      name: erebus-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: DATA_DIR
+        value: "/data"
+      - key: PLAYWRIGHT_BROWSERS_PATH
+        value: "/opt/render/project/src/.playwright"
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: TWITTER_user_name
+        sync: false
+      - key: TWITTER_email
+        sync: false
+      - key: TWITTER_pwd
+        sync: false
+      - key: TWITTER_API_CONSUMER_KEY
+        sync: false
+      - key: TWITTER_API_CONSUMER_SECRET
+        sync: false
+      - key: TWITTER_API_BEARER_TOKEN
+        sync: false
+      - key: TWITTER_API_ACCESS_TOKEN
+        sync: false
+      - key: TWITTER_API_ACCESS_TOKEN_SECRET
+        sync: false
+      - key: COOKIE_SECRET
+        sync: false
+      - key: RPC_URL
+        sync: false
+      - key: LAUNCHPAD_URL
+        sync: false
